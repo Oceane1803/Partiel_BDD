@@ -10,3 +10,9 @@ FROM athlete a
 INNER JOIN participation p ON a.id_athlete = p.id_athlete
 INNER JOIN epreuve e ON p.id_epreuve = e.id_epreuve
 WHERE e.id_epreuve >= 2;
+
+// Requête 3 (début) :
+SELECT a.name, p.nom
+FROM athlete a
+INNER JOIN pays p ON a.id_pays = p.id_pays
+INNER JOIN participation pa ON a.id_athlete = pa.id_athlete
